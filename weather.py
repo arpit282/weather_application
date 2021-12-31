@@ -39,6 +39,8 @@ def predict():
 		temperature = w.temperature('celsius')
 		temp =temperature['temp']
 		# status = w.detailed_status
+		sunrise = w.sunrise_time(timeformat='date')
+		sunset = w.sunset_time(timeformat='date')
 		humidity = float(w.humidity)
 		wind = w.wind()
 		wind_speed = float(wind['speed'])
@@ -73,12 +75,12 @@ def predict():
 		pred = model.predict(input_lst)
 
 		output = pred
-		if output == 0 and (month == 2 or month==1 or month==11 or month==12):
-			return render_template("after_sunny.html",city=city_name,pressure = pressure,humidity=humidity,clouds=clouds,day=date, sentense = 'So enjoy the warm sun in this winter season!')
-		elif output == 0 and (month == 3 or month==4 or month==4 or month==6 or month==7 or month==8 or month==9 or month==10 ):
-			return render_template("after_sunny.html", city=city_name, pressure=pressure, humidity=humidity, clouds=clouds, day=date, sentense='So enjoy yourselves with a cool milkshake and icecream!')
+		if output == 1 and (month == 2 or month==1 or month==11 or month==12):
+			return render_template("after_sunny.html",city=city_name,pressure = pressure,humidity=humidity,clouds=clouds,day=date,sunrise =sunrise, sunset=sunset ,sentense = 'So enjoy the warm sun in this winter season!')
+		elif output == 1 and (month == 3 or month==4 or month==4 or month==6 or month==7 or month==8 or month==9 or month==10 ):
+			return render_template("after_sunny.html", city=city_name, pressure=pressure, humidity=humidity, clouds=clouds, day=date, sunrise =sunrise,sunset=sunset,sentense='So enjoy yourselves with a cool milkshake and icecream!')
 		else:
-			return render_template("after_rainy.html",city=city_name,pressure = pressure,humidity=humidity,clouds=clouds,day=date)
+			return render_template("after_rainy.html",city=city_name,pressure = pressure,humidity=humidity,clouds=clouds,day=date,sunrise =sunrise,sunset=sunset)
 	return render_template("index.html")
 
 if __name__=='__main__':
