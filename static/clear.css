@@ -2,24 +2,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://cdn.wallpapersafari.com/10/81/GFvHl7.jpg');
+
     background-position:center;
     height:100vh;
     width:100%;
     background-size:cover;
-    font-family: 'verdana'
+    font-family: 'verdana';
+    background-color: #FFFFFF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2300ccbe' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23000eaa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2300b6c6' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300259a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23009fcb' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23002a83' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%230086ca' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23002968' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23006bc0' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2300254b' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23004eaa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23001f2f' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
 }
-
-
-.navbar{
-                width: 100%;
-                /* background:linear-gradient(45deg, #00BABA,#166e64, #00BABA,#298b80, #00BABA,#2a867c) !important ; */
-                background:linear-gradient(-45deg, #EE7752,#E73C7E, #23A6D5,#23D5AB) ;
-                /* background: url('https://images.pexels.com/photos/2110951/pexels-photo-2110951.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'); */
-                background-size: 400% 400%;
-                position: relative;
-                animation: change 5s ease-in-out infinite;
-            }
 
             @keyframes change{
                 0%{background-position: 0 50%}
@@ -32,7 +25,7 @@ body{
   background: #000000d0;
   color: white;
   padding: 2em;
-  border-radius: 30px;
+  border-radius: 0px;
   width: 100%;
   max-width: 420px;
   margin: 1em;
